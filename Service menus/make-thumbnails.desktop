@@ -1,0 +1,16 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=video/*
+Actions=make-thumbnails
+# X-KDE-Submenu=Convert
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+X-KDE-Submenu=Actions
+Icon=video
+
+[Desktop Action make-thumbnails]
+Name=Make thumbnails
+Name[ru]=Создать миниатюры
+Icon=image
+Exec=~/.local/bin/mt %f

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/x-java-archive;
+Actions=runWithJava
+
+[Desktop Action runWithJava]
+Name=Run with Java
+Name[de]=Mit Java ausführen
+Icon=application-x-java
+Exec=java -jar %u

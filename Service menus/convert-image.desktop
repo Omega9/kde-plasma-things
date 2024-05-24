@@ -1,0 +1,39 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=image/*
+Actions=convert-to-jpg;convert-to-webp;convert-to-png;convert-to-avif;convert-to-jxl
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+X-KDE-Submenu=Actions
+Icon=image
+
+[Desktop Action convert-to-jpg]
+Name=Convert to JPG
+Name[ru]=Конвертировать в JPG
+Icon=image
+Exec=magick %f %f.jpg
+
+[Desktop Action convert-to-webp]
+Name=Convert to WEBP
+Name[ru]=Конвертировать в WEBP
+Icon=image
+Exec=magick %f %f.webp
+
+[Desktop Action convert-to-png]
+Name=Convert to PNG
+Name[ru]=Конвертировать в PNG
+Icon=image
+Exec=magick %f %f.png
+
+[Desktop Action convert-to-avif]
+Name=Convert to AVIF
+Name[ru]=Конвертировать в AVIF
+Icon=image
+Exec=magick %f %f.avif
+
+[Desktop Action convert-to-jxl]
+Name=Convert to Jpeg-XL
+Name[ru]=Конвертировать в Jpeg-XL
+Icon=image
+Exec=magick %f %f.jxl

@@ -1,0 +1,19 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=video/x-matroska;
+Icon=video-mp4
+Actions=mp4
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+X-KDE-Submenu=Actions
+X-KDE-Submenu[de]=Aktionen
+
+[Desktop Action mp4]
+Name=Convert to *.mp4
+Name[de]=Konvertiere zu *.mp4
+Name[hr]=Pretvoriti u *.mp4
+Name[ru]=Конвертировать в *.mp4
+Icon=video-mp4
+TryExec=ffmpeg
+Exec=file=%f; ffmpeg -i %f -codec copy -strict -2 "${file%.*}.mp4"

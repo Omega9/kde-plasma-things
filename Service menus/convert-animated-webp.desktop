@@ -1,0 +1,33 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=image/webp
+Actions=convert-webp-to-mp4;convert-webp-to-gif;convert-webp-to-png;convert-webp-to-jpg
+X-KDE-Submenu=Convert
+X-KDE-Submenu[ru]=Конвертировать
+# Icon=video
+Icon=format-convert-to-path
+
+[Desktop Action convert-webp-to-mp4]
+Name=Convert animated WEBP to MP4
+Name[ru]=Конвертировать анимированный WEBP в MP4
+Icon=video
+Exec=convert %u %u.mp4;notify-send 'Файл сконвертирован' --icon=dialog-information
+
+[Desktop Action convert-webp-to-gif]
+Name=Convert animated WEBP to GIF
+Name[ru]=Конвертировать анимированный WEBP в GIF
+Icon=video
+Exec=convert %u %u.gif;notify-send 'Файл сконвертирован' --icon=dialog-information
+
+[Desktop Action convert-webp-to-png]
+Name=Convert WEBP to PNG
+Name[ru]=Конвертировать WEBP в PNG
+Icon=image
+Exec=convert %u %u.png;notify-send 'Файл сконвертирован' --icon=dialog-information
+
+[Desktop Action convert-webp-to-jpg]
+Name=Convert WebP to JPG
+Name[ru]=Конвертировать WEBP в JPG
+Icon=image
+Exec=convert %u %u.jpg;notify-send 'Файл сконвертирован' --icon=dialog-information
