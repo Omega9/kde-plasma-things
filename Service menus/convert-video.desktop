@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Service
-ServiceTypes=KonqPopupMenu/Plugin
+# ServiceTypes=KonqPopupMenu/Plugin
 MimeType=video/*
 Actions=convert-webm;convert-mp4
 X-KDE-Priority=TopLevel
@@ -12,10 +12,12 @@ Icon=video
 Name=Convert file to WEBM
 Name[ru]=Конвертировать в WEBM
 Icon=video
-Exec=ffmpeg -i %f %f.webm
+Exec=ffmpeg -i %u %u.webm; notify-send 'File converted' --icon=dialog-information
+Exec[ru]=ffmpeg -i %u %u.webm; notify-send 'Файл сконвертирован' --icon=dialog-information
 
 [Desktop Action convert-mp4]
 Name=Convert file to MP4
 Name[ru]=Конвертировать в MP4
 Icon=video
-Exec=ffmpeg -i %f %f.mp4
+Exec=ffmpeg -i %u -c:v libx265 -c:a copy %u.mp4; notify-send 'File converted' --icon=dialog-information
+Exec[ru]=ffmpeg -i %u -c:v libx265 -c:a copy %u.mp4; notify-send 'Файл сконвертирован' --icon=dialog-information

@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Service
-ServiceTypes=KonqPopupMenu/Plugin
+# ServiceTypes=KonqPopupMenu/Plugin
 MimeType=video/x-matroska;
 Icon=video-mp4
 Actions=mp4

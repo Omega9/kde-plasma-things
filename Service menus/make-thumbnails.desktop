@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Service
-ServiceTypes=KonqPopupMenu/Plugin
+# ServiceTypes=KonqPopupMenu/Plugin
 MimeType=video/*
 Actions=make-thumbnails
 # X-KDE-Submenu=Convert
@@ -13,4 +13,4 @@ Icon=video
 Name=Make thumbnails
 Name[ru]=Создать миниатюры
 Icon=image
-Exec=~/.local/bin/mt %f
+Exec=~/.local/bin/mt %U

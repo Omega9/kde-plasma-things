@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Service
-ServiceTypes=KonqPopupMenu/Plugin
+# ServiceTypes=KonqPopupMenu/Plugin
 MimeType=image/gif
 Actions=convert-gif-to-mp4;convert-gif-to-webm
 X-KDE-Priority=TopLevel
@@ -12,10 +12,12 @@ Icon=video
 Name=Convert GIF to MP4
 Name[ru]=Конвертировать GIF в MP4
 Icon=video
-Exec=ffmpeg -i %f %f.mp4;notify-send 'Файл сконвертирован' --icon=dialog-information
+Exec=ffmpeg -i %u -c:v libx265 %u.mp4; notify-send 'File converted' --icon=dialog-information
+Exec[ru]=ffmpeg -i %u -c:v libx265 %u.mp4; notify-send 'Файл сконвертирован' --icon=dialog-information
 
 [Desktop Action convert-gif-to-webm]
 Name=Convert GIF to WEBM
 Name[ru]=Конвертировать GIF в WEBM
 Icon=video
-Exec=ffmpeg -i %f %f.webm;notify-send 'Файл сконвертирован' --icon=dialog-information
+Exec=ffmpeg -i %u %u.webm; notify-send 'File converted' --icon=dialog-information
+Exec[ru]=ffmpeg -i %u %u.webm; notify-send 'Файл сконвертирован' --icon=dialog-information
