@@ -16,4 +16,4 @@ Name[hr]=Pretvoriti u *.mkv
 Name[ru]=Конвертировать в *.mkv
 Icon=video-mkv
 TryExec=ffmpeg
-Exec=ffmpeg -i %u -codec copy -c:a copy -map_metadata 0 -movflags +faststart -strict -2 %u.mkv
+Exec=ffmpeg -i %u -codec copy -c:a copy -map_metadata 0 -movflags +faststart -strict -2 %u.mkv; touch -r %u %u.mkv

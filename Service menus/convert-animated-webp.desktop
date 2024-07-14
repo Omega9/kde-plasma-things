@@ -12,26 +12,26 @@ Icon=format-convert-to-path
 Name=Convert animated WEBP to MP4
 Name[ru]=Конвертировать анимированный WEBP в MP4
 Icon=video
-Exec=convert %u -c:v libx265 -movflags +faststart %u.mp4; notify-send 'File converted' --icon=dialog-information
-Exec[ru]=convert %u -c:v libx265 -movflags +faststart %u.mp4; notify-send 'Файл сконвертирован' --icon=dialog-information
+Exec=convert %u -c:v libx265 -movflags +faststart %u.mp4; touch -r %u %.mp4; notify-send 'File converted' --icon=dialog-information
+Exec[ru]=convert %u -c:v libx265 -movflags +faststart %u.mp4; touch -r %u %.mp4; notify-send 'Файл сконвертирован' --icon=dialog-information
 
 [Desktop Action convert-webp-to-gif]
 Name=Convert animated WEBP to GIF
 Name[ru]=Конвертировать анимированный WEBP в GIF
 Icon=video
-Exec=convert %u %u.gif; notify-send 'File converted' --icon=dialog-information
-Exec[ru]=convert %u %u.gif; notify-send 'Файл сконвертирован' --icon=dialog-information
+Exec=convert %u %u.gif; touch -r %u %u.gif; notify-send 'File converted' --icon=dialog-information
+Exec[ru]=convert %u %u.gif; touch -r %u %u.gif; notify-send 'Файл сконвертирован' --icon=dialog-information
 
 [Desktop Action convert-webp-to-png]
 Name=Convert WEBP to PNG
 Name[ru]=Конвертировать WEBP в PNG
 Icon=image
-Exec=convert %u %u.png; notify-send 'File converted' --icon=dialog-information
-Exec[ru]=convert %u %u.png; notify-send 'Файл сконвертирован' --icon=dialog-information
+Exec=convert %u %u.png; touch -r %u %u.png; notify-send 'File converted' --icon=dialog-information
+Exec[ru]=convert %u %u.png; touch -r %u %u.png; notify-send 'Файл сконвертирован' --icon=dialog-information
 
 [Desktop Action convert-webp-to-jpg]
 Name=Convert WebP to JPG
 Name[ru]=Конвертировать WEBP в JPG
 Icon=image
-Exec=convert %u %u.jpg; notify-send 'File converted' --icon=dialog-information
-Exec[ru]=convert %u %u.jpg; notify-send 'Файл сконвертирован' --icon=dialog-information
+Exec=convert %u %u.jpg; touch -r %u %u.jpg; notify-send 'File converted' --icon=dialog-information
+Exec[ru]=convert %u %u.jpg; touch -r %u %u.jpg; notify-send 'Файл сконвертирован' --icon=dialog-information

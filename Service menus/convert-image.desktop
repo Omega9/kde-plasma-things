@@ -12,28 +12,28 @@ Icon=image
 Name=Convert to JPG
 Name[ru]=Конвертировать в JPG
 Icon=image
-Exec=magick %u %u.jpg
+Exec=magick %u %u.jpg; touch -r %u %u.jpg
 
 [Desktop Action convert-to-webp]
 Name=Convert to WEBP
 Name[ru]=Конвертировать в WEBP
 Icon=image
-Exec=magick %u %u.webp
+Exec=magick %u %u.webp; touch -r %u %u.webp
 
 [Desktop Action convert-to-png]
 Name=Convert to PNG
 Name[ru]=Конвертировать в PNG
 Icon=image
-Exec=magick %u %u.png
+Exec=magick %u %u.png; touch -r %u %u.png
 
 [Desktop Action convert-to-avif]
 Name=Convert to AVIF
 Name[ru]=Конвертировать в AVIF
 Icon=image
-Exec=magick %u %u.avif
+Exec=magick %u %u.avif; touch -r %u %u.avif
 
 [Desktop Action convert-to-jxl]
 Name=Convert to Jpeg-XL
 Name[ru]=Конвертировать в Jpeg-XL
 Icon=image
-Exec=magick %u %u.jxl
+Exec=magick %u %u.jxl; touch -r %u %u.jxl
