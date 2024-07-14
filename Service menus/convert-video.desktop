@@ -12,12 +12,12 @@ Icon=video
 Name=Convert file to WEBM
 Name[ru]=Конвертировать в WEBM
 Icon=video
-Exec=ffmpeg -i %u %u.webm; notify-send 'File converted' --icon=dialog-information
-Exec[ru]=ffmpeg -i %u -map_metadata 0 -movflags use_metadata_tags %u.webm; notify-send 'Файл сконвертирован' --icon=dialog-information
+Exec=ffmpeg -i %u -map_metadata 0 -movflags %u.webm; notify-send 'File converted' --icon=dialog-information
+Exec[ru]=ffmpeg -i %u -map_metadata 0 -movflags %u.webm; notify-send 'Файл сконвертирован' --icon=dialog-information
 
 [Desktop Action convert-mp4]
 Name=Convert file to MP4
 Name[ru]=Конвертировать в MP4
 Icon=video
-Exec=ffmpeg -i %u -c:v libx265 -c:a copy -map_metadata 0 -movflags +faststart use_metadata_tags %u.mp4; notify-send 'File converted' --icon=dialog-information
-Exec[ru]=ffmpeg -i %u -c:v libx265 -c:a copy -map_metadata 0 -movflags +faststart use_metadata_tags %u.mp4; notify-send 'Файл сконвертирован' --icon=dialog-information
+Exec=ffmpeg -i %u -c:v libx265 -c:a copy -map_metadata 0 -movflags +faststart %u.mp4; notify-send 'File converted' --icon=dialog-information
+Exec[ru]=ffmpeg -i %u -c:v libx265 -c:a copy -map_metadata 0 -movflags +faststart %u.mp4; notify-send 'Файл сконвертирован' --icon=dialog-information
