@@ -12,5 +12,5 @@ Icon=video
 Name=Convert video to MP4 (x265)
 Name[ru]=Конвертировать видео в MP4 (x265)
 Icon=video
-Exec=ffmpeg -i %u -c:v libx265 -crf 28 -c:a copy -map_metadata 0 -movflags +faststart %u.x265.mp4; touch -r %u %u.mp4; notify-send 'File converted' --icon=dialog-information
-Exec[ru]=ffmpeg -i %u -c:v libx265 -crf 28 -c:a copy -map_metadata 0 -movflags +faststart %u.x265.mp4; touch -r %u %u.mp4; notify-send 'Файл сконвертирован' --icon=dialog-information
+Exec=ffmpeg -i %u -c:v libx265 -crf 28 -c:a copy -map_metadata 0 -movflags +faststart %u.x265.mp4; touch -r %u %u.x265.mp4; notify-send 'File converted' --icon=dialog-information
+Exec[ru]=ffmpeg -i %u -c:v libx265 -crf 28 -c:a copy -map_metadata 0 -movflags +faststart %u.x265.mp4; touch -r %u %u.x265.mp4; notify-send 'Файл сконвертирован' --icon=dialog-information
