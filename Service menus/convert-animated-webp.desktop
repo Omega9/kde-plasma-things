@@ -12,8 +12,8 @@ Icon=format-convert-to-path
 Name=Convert animated WEBP to MP4
 Name[ru]=Конвертировать анимированный WEBP в MP4
 Icon=video
-Exec=convert %u -c:v libx265 %u.mp4; notify-send 'File converted' --icon=dialog-information
-Exec[ru]=convert %u -c:v libx265 %u.mp4; notify-send 'Файл сконвертирован' --icon=dialog-information
+Exec=convert %u -c:v libx265 -movflags +faststart %u.mp4; notify-send 'File converted' --icon=dialog-information
+Exec[ru]=convert %u -c:v libx265 -movflags +faststart %u.mp4; notify-send 'Файл сконвертирован' --icon=dialog-information
 
 [Desktop Action convert-webp-to-gif]
 Name=Convert animated WEBP to GIF

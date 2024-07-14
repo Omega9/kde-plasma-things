@@ -16,4 +16,4 @@ Name[hr]=Pretvoriti u *.mp4
 Name[ru]=Конвертировать в *.mp4
 Icon=video-mp4
 TryExec=ffmpeg
-Exec=file=%f; ffmpeg -i %f -codec copy -strict -2 "${file%.*}.mp4"
+Exec=file=%f; ffmpeg -i %f -codec copy -c:a copy -map_metadata 0 -movflags +faststart use_metadata_tags -strict -2 "${file%.*}.mp4"

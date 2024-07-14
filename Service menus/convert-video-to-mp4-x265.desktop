@@ -1,0 +1,16 @@
+[Desktop Entry]
+Type=Service
+# ServiceTypes=KonqPopupMenu/Plugin
+MimeType=video/*
+Actions=convert-video-to-mp4-x265
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+X-KDE-Submenu=Actions
+Icon=video
+
+[Desktop Action convert-mp4]
+Name=Convert video to MP4 (x265)
+Name[ru]=Конвертировать видео в MP4 (x265)
+Icon=video
+Exec=ffmpeg -i %u -c:v libx265 -crf 28 -c:a copy -map_metadata 0 -movflags +faststart use_metadata_tags %u.x265.mp4; notify-send 'File converted' --icon=dialog-information
+Exec[ru]=ffmpeg -i %u -c:v libx265 -crf 28 -c:a copy -map_metadata 0 -movflags +faststart use_metadata_tags %u.x265.mp4; notify-send 'Файл сконвертирован' --icon=dialog-information
