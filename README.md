@@ -7,3 +7,6 @@
 `$HOME/.local/share/kwin/scripts/`
 
 - `kzones.zones` - my layouts for [KZones](https://store.kde.org/p/1909220)
+
+## File templates
+`$HOME/.local//share/templates/`

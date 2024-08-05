@@ -12,8 +12,8 @@ Icon=video
 Name=Convert file to WEBM
 Name[ru]=Конвертировать в WEBM
 Icon=video
-Exec=ffmpeg -i %u -map_metadata 0 -movflags %u.webm; touch -r %u %u.webm; notify-send 'File converted' --icon=dialog-information
-Exec[ru]=ffmpeg -i %u -map_metadata 0 -movflags %u.webm; touch -r %u %u.webm; notify-send 'Файл сконвертирован' --icon=dialog-information
+Exec=ffmpeg -i %u -map_metadata 0 -movflags -o %u.webm; touch -r %u %u.webm; notify-send 'File converted' --icon=dialog-information
+Exec[ru]=ffmpeg -i %u -map_metadata 0 -movflags -o %u.webm; touch -r %u %u.webm; notify-send 'Файл сконвертирован' --icon=dialog-information
 
 [Desktop Action convert-mp4]
 Name=Convert file to MP4

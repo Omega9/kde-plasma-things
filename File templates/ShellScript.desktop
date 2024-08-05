@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Shell-script...
+Name[ru]=Shell-скрипт...
+Comment=Enter script filename:
+Comment[ru]=Введите имя для скрипта:
+Type=Link
+URL=ShellScript.sh
+Icon=shellscript
