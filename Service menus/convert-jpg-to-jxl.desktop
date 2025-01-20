@@ -1,0 +1,21 @@
+[Desktop Entry]
+Type=Service
+# ServiceTypes=KonqPopupMenu/Plugin
+MimeType=image/jpeg
+Actions=convert-jpg-to-jxl-lossless;convert-jpg-to-jxl-lossy
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+X-KDE-Submenu=Actions
+Icon=image
+
+[Desktop Action convert-jpg-to-jxl-lossless]
+Name=Convert Jpeg to Jpeg-XL (lossless)
+Name[ru]=Конвертировать Jpeg в Jpeg-XL (без потерь)
+Icon=image
+Exec=cjxl -e 8 --lossless_jpeg=1 %u %u.jxl; touch -r %u %u.jxl
+
+[Desktop Action convert-jpg-to-jxl-lossy]
+Name=Convert Jpeg to Jpeg-XL (lossy q70)
+Name[ru]=Конвертировать Jpeg в Jpeg-XL (q70)
+Icon=image
+Exec=cjxl -e 7 -q 70 --lossless_jpeg=0 %u %u.jxl; touch -r %u %u.jxl
