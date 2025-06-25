@@ -1,0 +1,22 @@
+[Desktop Entry]
+Type=Service
+# ServiceTypes=KonqPopupMenu/Plugin
+MimeType=video/*
+Actions=convert-to-hevc-with-handbrake
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+X-KDE-Submenu=Actions
+Icon=video
+
+# [Desktop Action convert-to-hevc-with-handbrake]
+# Name=Convert to HEVC with HandBrake
+# Name[ru]=Конвертировать в HEVC (HandBrake)
+# Icon=video
+# Exec=HandBrakeCLI -i %u -o %u.x265.mp4 --preset-import-gui --preset "Fast  x265"; touch -r %u %u.x265.mp4; notify-send 'File converted' --icon=dialog-information
+# Exec[ru]=HandBrakeCLI -i %u -o %u.x265.mp4 --preset-import-gui --preset "Fast  x265"; touch -r %u %u.x265.mp4; notify-send 'Файл сконвертирован' --icon=dialog-information
+
+[Desktop Action convert-to-hevc-with-handbrake]
+Name=Convert to HEVC with HandBrake
+Name[ru]=Конвертировать в HEVC (HandBrake)
+Icon=video
+Exec=~/.local/share/kio/servicemenus/convert-to-hevc-with-handbrake.sh %F
