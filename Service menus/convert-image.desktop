@@ -6,34 +6,35 @@ Actions=convert-to-jpg;convert-to-webp;convert-to-png;convert-to-avif;convert-to
 X-KDE-Priority=TopLevel
 X-KDE-StartupNotify=false
 X-KDE-Submenu=Actions
+X-KDE-Submenu[ru]=Действия
 Icon=image
 
 [Desktop Action convert-to-jpg]
-Name=Convert to JPG
-Name[ru]=Конвертировать в JPG
+Name=[magick] Convert to JPG
+Name[ru]=[magick] Конвертировать в JPG
 Icon=image
 Exec=magick %u %u.jpg; touch -r %u %u.jpg
 
 [Desktop Action convert-to-webp]
-Name=Convert to WEBP
-Name[ru]=Конвертировать в WEBP
+Name=[magick] Convert to WEBP
+Name[ru]=[magick] Конвертировать в WEBP
 Icon=image
 Exec=magick %u %u.webp; touch -r %u %u.webp
 
 [Desktop Action convert-to-png]
-Name=Convert to PNG
-Name[ru]=Конвертировать в PNG
+Name=[magick] Convert to PNG
+Name[ru]=[magick] Конвертировать в PNG
 Icon=image
 Exec=magick %u %u.png; touch -r %u %u.png
 
 [Desktop Action convert-to-avif]
-Name=Convert to AVIF
-Name[ru]=Конвертировать в AVIF
+Name=[magick] Convert to AVIF
+Name[ru]=[magick] Конвертировать в AVIF
 Icon=image
 Exec=magick %u %u.avif; touch -r %u %u.avif
 
 [Desktop Action convert-to-jxl]
-Name=Convert to Jpeg-XL
-Name[ru]=Конвертировать в Jpeg-XL
+Name=[magick] Convert to JXL
+Name[ru]=[magick] Конвертировать в JXL
 Icon=image
 Exec=magick %u %u.jxl; touch -r %u %u.jxl

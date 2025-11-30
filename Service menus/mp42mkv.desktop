@@ -7,12 +7,10 @@ Actions=mkv
 X-KDE-Priority=TopLevel
 X-KDE-StartupNotify=false
 X-KDE-Submenu=Actions
-X-KDE-Submenu[de]=Aktionen
+X-KDE-Submenu[ru]=Действия
 
 [Desktop Action mkv]
 Name=Convert to *.mkv
-Name[de]=Konvertiere zu *.mkv
-Name[hr]=Pretvoriti u *.mkv
 Name[ru]=Конвертировать в *.mkv
 Icon=video-mkv
 TryExec=ffmpeg

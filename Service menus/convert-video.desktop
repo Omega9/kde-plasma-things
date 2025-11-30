@@ -6,6 +6,7 @@ Actions=convert-webm;convert-mp4-x264;convert-mp4-x265;convert-mp4-av1
 X-KDE-Priority=TopLevel
 X-KDE-StartupNotify=false
 X-KDE-Submenu=Actions
+X-KDE-Submenu[ru]=Действия
 Icon=video
 
 [Desktop Action convert-webm]

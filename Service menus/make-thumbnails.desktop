@@ -7,6 +7,7 @@ Actions=make-thumbnails
 X-KDE-Priority=TopLevel
 X-KDE-StartupNotify=false
 X-KDE-Submenu=Actions
+X-KDE-Submenu[ru]=Действия
 Icon=video
 
 [Desktop Action make-thumbnails]
