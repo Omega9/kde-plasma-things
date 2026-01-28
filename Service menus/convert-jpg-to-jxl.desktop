@@ -16,7 +16,7 @@ Icon=image
 Exec=cjxl -e 8 --lossless_jpeg=1 %u %u.jxl; touch -r %u %u.jxl
 
 [Desktop Action convert-jpg-to-jxl-lossy]
-Name=[cjxl] Convert JPG to JXL (lossy q70)
-Name[ru]=[cjxl] Конвертировать JPG в JXL (q70)
+Name=[cjxl] Convert JPG to JXL (lossy q75)
+Name[ru]=[cjxl] Конвертировать JPG в JXL (q75)
 Icon=image
-Exec=cjxl -e 7 -q 70 --lossless_jpeg=0 %u %u.jxl; touch -r %u %u.jxl
+Exec=cjxl -e 7 -q 75 --lossless_jpeg=0 %u %u.jxl; touch -r %u %u.jxl

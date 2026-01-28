@@ -9,30 +9,54 @@ X-KDE-Submenu=Actions
 X-KDE-Submenu[ru]=Действия
 Icon=video
 
+# [Desktop Action convert-webm]
+# Name=Convert file to WEBM
+# Name[ru]=Конвертировать в WEBM
+# Icon=video
+# Exec=ffmpeg -i %u -map_metadata 0 -movflags -o %u.webm; touch -r %u %u.webm; notify-send 'File converted' --icon=dialog-information
+# Exec[ru]=ffmpeg -i %u -map_metadata 0 -movflags -o %u.webm; touch -r %u %u.webm; notify-send 'Файл сконвертирован' --icon=dialog-information
+
 [Desktop Action convert-webm]
 Name=Convert file to WEBM
 Name[ru]=Конвертировать в WEBM
 Icon=video
-Exec=ffmpeg -i %u -map_metadata 0 -movflags -o %u.webm; touch -r %u %u.webm; notify-send 'File converted' --icon=dialog-information
-Exec[ru]=ffmpeg -i %u -map_metadata 0 -movflags -o %u.webm; touch -r %u %u.webm; notify-send 'Файл сконвертирован' --icon=dialog-information
+Exec=~/.local/share/kio/servicemenus/convert-video.sh -convert-mp4-webm %F
+
+# [Desktop Action convert-mp4-x264]
+# Name=Convert file to MP4 (x264)
+# Name[ru]=Конвертировать в MP4 (x264)
+# Icon=video
+# Exec=ffmpeg -i %u -c:v libx264 -c:a copy -map_metadata 0 -movflags +faststart %u.x264.mp4; touch -r %u %u.x264.mp4; notify-send 'File converted' --icon=dialog-information
+# Exec[ru]=ffmpeg -i %u -c:v libx264 -c:a copy -map_metadata 0 -movflags +faststart %u.x264.mp4; touch -r %u %u.x264.mp4; notify-send 'Файл сконвертирован' --icon=dialog-information
 
 [Desktop Action convert-mp4-x264]
 Name=Convert file to MP4 (x264)
 Name[ru]=Конвертировать в MP4 (x264)
 Icon=video
-Exec=ffmpeg -i %u -c:v libx264 -c:a copy -map_metadata 0 -movflags +faststart %u.x264.mp4; touch -r %u %u.x264.mp4; notify-send 'File converted' --icon=dialog-information
-Exec[ru]=ffmpeg -i %u -c:v libx264 -c:a copy -map_metadata 0 -movflags +faststart %u.x264.mp4; touch -r %u %u.x264.mp4; notify-send 'Файл сконвертирован' --icon=dialog-information
+Exec=~/.local/share/kio/servicemenus/convert-video.sh -convert-mp4-x264 %F
+
+# [Desktop Action convert-mp4-x265]
+# Name=Convert video to MP4 (x265)
+# Name[ru]=Конвертировать в MP4 (x265)
+# Icon=video
+# Exec=ffmpeg -i %u -c:v libx265 -crf 28 -c:a copy -map_metadata 0 -movflags +faststart %u.x265.mp4; touch -r %u %u.x265.mp4; notify-send 'File converted' --icon=dialog-information
+# Exec[ru]=ffmpeg -i %u -c:v libx265 -crf 28 -c:a copy -map_metadata 0 -movflags +faststart %u.x265.mp4; touch -r %u %u.x265.mp4; notify-send 'Файл сконвертирован' --icon=dialog-information
 
 [Desktop Action convert-mp4-x265]
 Name=Convert video to MP4 (x265)
 Name[ru]=Конвертировать в MP4 (x265)
 Icon=video
-Exec=ffmpeg -i %u -c:v libx265 -crf 28 -c:a copy -map_metadata 0 -movflags +faststart %u.x265.mp4; touch -r %u %u.x265.mp4; notify-send 'File converted' --icon=dialog-information
-Exec[ru]=ffmpeg -i %u -c:v libx265 -crf 28 -c:a copy -map_metadata 0 -movflags +faststart %u.x265.mp4; touch -r %u %u.x265.mp4; notify-send 'Файл сконвертирован' --icon=dialog-information
+Exec=~/.local/share/kio/servicemenus/convert-video.sh -convert-mp4-x265 %F
+
+# [Desktop Action convert-mp4-av1]
+# Name=Convert file to MP4 (AV1)
+# Name[ru]=Конвертировать в MP4 (AV1)
+# Icon=video
+# Exec=ffmpeg -i %u -c:v librav1e -crf 28 -c:a copy -map_metadata 0 -movflags +faststart %u.av1.mp4; touch -r %u %u.av1.mp4; notify-send 'File converted' --icon=dialog-information
+# Exec[ru]=ffmpeg -i %u -c:v librav1e -crf 28 -c:a copy -map_metadata 0 -movflags +faststart %u.av1.mp4; touch -r %u %u.av1.mp4; notify-send 'Файл сконвертирован' --icon=dialog-information
 
 [Desktop Action convert-mp4-av1]
 Name=Convert file to MP4 (AV1)
 Name[ru]=Конвертировать в MP4 (AV1)
 Icon=video
-Exec=ffmpeg -i %u -c:v librav1e -crf 28 -c:a copy -map_metadata 0 -movflags +faststart %u.av1.mp4; touch -r %u %u.av1.mp4; notify-send 'File converted' --icon=dialog-information
-Exec[ru]=ffmpeg -i %u -c:v librav1e -crf 28 -c:a copy -map_metadata 0 -movflags +faststart %u.av1.mp4; touch -r %u %u.av1.mp4; notify-send 'Файл сконвертирован' --icon=dialog-information
+Exec=~/.local/share/kio/servicemenus/convert-video.sh -convert-mp4-av1 %F

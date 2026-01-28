@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Service
+MimeType=video/*
+Actions=container-mp4
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+X-KDE-Submenu=Actions
+X-KDE-Submenu[ru]=Действия
+Icon=video
+
+[Desktop Action container-mp4]
+Name=Remux to MP4 (no re-encode)
+Name[ru]=Сменить контейнер на MP4 (без перекодирования)
+Icon=video
+Exec=~/.local/share/kio/servicemenus/container-mp4.sh %F
