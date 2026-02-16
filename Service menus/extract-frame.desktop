@@ -1,0 +1,22 @@
+[Desktop Entry]
+Type=Service
+MimeType=video/mp4;video/quicktime;
+# Actions=extractFrame;extractSlides;
+Actions=extractFrame
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+X-KDE-Priority=TopLevel
+X-KDE-Submenu=Actions
+X-KDE-Submenu[ru]=Действия
+Icon=video
+
+[Desktop Action extractFrame]
+Name=Extract first keyframe (WebP q75)
+Name[ru]=Извлечь первый ключевой кадр (WebP q75)
+Icon=image-x-generic
+Exec=ffmpeg -hide_banner -loglevel error -y -skip_frame nokey -i "%f" -frames:v 1 -c:v libwebp -q:v 75 -compression_level 6 -preset picture "%f_frame.webp" && touch -r "%f" "%f_frame.webp"
+
+# [Desktop Action extractSlides]
+# Name=Extract slides (I-frames, WebP q75)
+# Name[ru]=Извдечь слайды (I-frames, WebP q75)
+# Icon=image-x-generic
+# Exec=ffmpeg -hide_banner -loglevel error -skip_frame nokey -i "%f" -vsync vfr -c:v libwebp -q:v 75 -compression_level 6 -preset picture "%f_slide_%03d.webp" && for f in "%f"_slide_*.webp; do touch -r "%f" "$f"; done
