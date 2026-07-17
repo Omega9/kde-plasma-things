@@ -3,9 +3,23 @@ set -euo pipefail
 
 MON="DVI-D-1" # or HDMI-A-1
 
-if hyprctl monitors all | grep -A30 "^Monitor $MON" | grep -q "disabled: false"; then
-    hyprctl keyword monitor "$MON,disable"
+DISABLED=$(
+    hyprctl monitors all -j |
+    jq -r ".[] | select(.name == \"$MON\") | .disabled"
+)
+
+if [[ "$DISABLED" == "true" ]]; then
+    hyprctl eval "
+        hl.monitor({
+            output = \"$MON\",
+            disabled = false
+        })
+    "
 else
-    # back to default settings (preferred mode, automatic positioning, scale 1)
-    hyprctl keyword monitor "$MON,preferred,auto,1"
+    hyprctl eval "
+        hl.monitor({
+            output = \"$MON\",
+            disabled = true
+        })
+    "
 fi

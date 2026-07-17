@@ -2,7 +2,7 @@
 
 MON="DVI-D-1" # or HDMI-A-1
 
-if kscreen-doctor -o | awk "/Output: .* $MON/{f=1} f && /enabled/{print; exit}" | grep -q enabled; then
+if kscreen-doctor --json | jq -e ".outputs[] | select(.name==\"$MON\") | .enabled" >/dev/null; then
     kscreen-doctor output.$MON.disable
 else
     kscreen-doctor output.$MON.enable
