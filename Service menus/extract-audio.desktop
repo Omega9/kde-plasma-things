@@ -3,10 +3,10 @@ Type=Service
 MimeType=video/*
 Icon=audio-x-generic
 Actions=mp3;flac;
-X-KDE-Priority=TopLevel
-X-KDE-StartupNotify=false
-X-KDE-Submenu=Actions
-X-KDE-Submenu[ru]=Действия
+# X-KDE-Priority=TopLevel
+# X-KDE-StartupNotify=false
+# X-KDE-Submenu=Actions
+# X-KDE-Submenu[ru]=Действия
 
 [Desktop Action mp3]
 Name=Extract → MP3

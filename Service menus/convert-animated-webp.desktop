@@ -3,8 +3,8 @@ Type=Service
 # ServiceTypes=KonqPopupMenu/Plugin
 MimeType=image/webp
 Actions=convert-webp-to-mp4;convert-webp-to-gif;convert-webp-to-png;convert-webp-to-jpg
-X-KDE-Submenu=Convert
-X-KDE-Submenu[ru]=Конвертировать
+# X-KDE-Submenu=Convert
+# X-KDE-Submenu[ru]=Конвертировать
 # Icon=video
 Icon=format-convert-to-path
 

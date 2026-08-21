@@ -4,10 +4,10 @@ Type=Service
 MimeType=video/*
 Actions=make-thumbnails
 # X-KDE-Submenu=Convert
-X-KDE-Priority=TopLevel
-X-KDE-StartupNotify=false
-X-KDE-Submenu=Actions
-X-KDE-Submenu[ru]=Действия
+# X-KDE-Priority=TopLevel
+# X-KDE-StartupNotify=false
+# X-KDE-Submenu=Actions
+# X-KDE-Submenu[ru]=Действия
 Icon=video
 
 [Desktop Action make-thumbnails]

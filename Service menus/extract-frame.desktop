@@ -3,10 +3,10 @@ Type=Service
 MimeType=video/mp4;video/quicktime;
 # Actions=extractFrame;extractSlides;
 Actions=extractFrame
-X-KDE-ServiceTypes=KonqPopupMenu/Plugin
-X-KDE-Priority=TopLevel
-X-KDE-Submenu=Actions
-X-KDE-Submenu[ru]=Действия
+# X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+# X-KDE-Priority=TopLevel
+# X-KDE-Submenu=Actions
+# X-KDE-Submenu[ru]=Действия
 Icon=video
 
 [Desktop Action extractFrame]
