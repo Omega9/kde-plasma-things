@@ -1,0 +1,18 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=text/plain;application/x-ini;text/x-ini;
+Actions=SortINI;SortINISections
+# X-KDE-Priority=TopLevel
+
+[Desktop Action SortINI]
+Name=Sort INI (keys only)
+Name[ru]=Сортировать INI (только ключи)
+Icon=view-sort-ascending
+Exec=~/.local/share/kio/servicemenus/sort_ini.py %F
+
+[Desktop Action SortINISections]
+Name=Sort INI (keys + sections)
+Name[ru]=Сортировать INI (ключи + секции)
+Icon=view-sort-ascending
+Exec=~/.local/share/kio/servicemenus/sort_ini.py --sort-sections %F
