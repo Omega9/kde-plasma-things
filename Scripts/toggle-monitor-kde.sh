@@ -1,9 +1,12 @@
 #!/bin/bash
 
-MON="DVI-D-1" # or HDMI-A-1
+MON="DVI-D-1"
+echo "MON=$MON"
 
-if kscreen-doctor --json | jq -e ".outputs[] | select(.name==\"$MON\") | .enabled" >/dev/null; then
-    kscreen-doctor output.$MON.disable
+if kscreenctl list-outputs | grep -A 1 "Output:.*$MON" | grep -q "enabled"; then
+    echo "$MON is on, turning off"
+    kscreenctl "$MON" set-enabled false
 else
-    kscreen-doctor output.$MON.enable
+    echo "$MON is off, turning off"
+    kscreenctl "$MON" set-enabled true
 fi
