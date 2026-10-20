@@ -1,0 +1,79 @@
+
+[Desktop Entry]
+Type=Service
+MimeType=inode/directory;
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+X-KDE-Submenu=Krokiet
+X-KDE-Submenu[ru]=Krokiet
+Icon=krokiet
+Actions=duplicates;empty-folders;biggest-files;empty-files;temporary;similar-images;similar-videos;same-music;invalid-symlinks;broken-files;bad-extensions;bad-names;exif-remover;video-optimizer;
+
+[Desktop Action duplicates]
+Name=Find duplicates
+Name[ru]=Поиск дубликатов
+Exec=SLINT_BACKEND=winit-skia-opengl krokiet --tool duplicates --scan %f
+
+[Desktop Action empty-folders]
+Name=Find empty folders
+Name[ru]=Поиск пустых папок
+Exec=SLINT_BACKEND=winit-skia-opengl krokiet --tool empty-folders --scan %f
+
+[Desktop Action biggest-files]
+Name=Find biggest files
+Name[ru]=Поиск самых больших файлов
+Exec=SLINT_BACKEND=winit-skia-opengl krokiet --tool biggest-files --scan %f
+
+[Desktop Action empty-files]
+Name=Find empty files
+Name[ru]=Поиск пустых файлов
+Exec=SLINT_BACKEND=winit-skia-opengl krokiet --tool empty-files --scan %f
+
+[Desktop Action temporary]
+Name=Find temporary files
+Name[ru]=Поиск временных файлов
+Exec=SLINT_BACKEND=winit-skia-opengl krokiet --tool temporary --scan %f
+
+[Desktop Action similar-images]
+Name=Find similar images
+Name[ru]=Поиск похожих изображений
+Exec=SLINT_BACKEND=winit-skia-opengl krokiet --tool similar-images --scan %f
+
+[Desktop Action similar-videos]
+Name=Find similar videos
+Name[ru]=Поиск похожих видео
+Exec=SLINT_BACKEND=winit-skia-opengl krokiet --tool similar-videos --scan %f
+
+[Desktop Action same-music]
+Name=Find identical music
+Name[ru]=Поиск одинаковой музыки
+Exec=SLINT_BACKEND=winit-skia-opengl krokiet --tool same-music --scan %f
+
+[Desktop Action invalid-symlinks]
+Name=Find invalid symlinks
+Name[ru]=Поиск некорректных символических ссылок
+Exec=SLINT_BACKEND=winit-skia-opengl krokiet --tool invalid-symlinks --scan %f
+
+[Desktop Action broken-files]
+Name=Find broken files
+Name[ru]=Поиск повреждённых файлов
+Exec=SLINT_BACKEND=winit-skia-opengl krokiet --tool broken-files --scan %f
+
+[Desktop Action bad-extensions]
+Name=Find files with bad extensions
+Name[ru]=Поиск файлов с неверными расширениями
+Exec=SLINT_BACKEND=winit-skia-opengl krokiet --tool bad-extensions --scan %f
+
+[Desktop Action bad-names]
+Name=Find files with bad names
+Name[ru]=Поиск файлов с некорректными именами
+Exec=SLINT_BACKEND=winit-skia-opengl krokiet --tool bad-names --scan %f
+
+[Desktop Action exif-remover]
+Name=Remove EXIF
+Name[ru]=Удаление метаданных EXIF
+Exec=SLINT_BACKEND=winit-skia-opengl krokiet --tool exif-remover --scan %f
+
+[Desktop Action video-optimizer]
+Name=Optimize videos
+Name[ru]=Оптимизация видео
+Exec=SLINT_BACKEND=winit-skia-opengl krokiet --tool video-optimizer --scan %f
